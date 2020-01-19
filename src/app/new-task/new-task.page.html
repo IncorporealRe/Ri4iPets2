@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>New Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-row no-padding>
+      <ion-col size="6" offset="3">
+        <img [src]="image" alt="this is the image"/>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col size="6" offset="3">
+        <ion-button (click)="openCam()" expand="block" fill="outline" size="small" >Open Camera</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label position="floating" color="primary">Name</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Age</ion-label>
+      <ion-input type="text" formControlName="age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"  color="primary">Gender</ion-label>
+      <ion-select formControlName="gender">
+        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option value="male">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Breed</ion-label>
+      <ion-select formControlName="breed">
+        <ion-select-option *ngFor="let item of Breed">{{item}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Create</ion-button>
+  </form>
+</ion-content>

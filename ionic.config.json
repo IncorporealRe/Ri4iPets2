@@ -1,5 +1,7 @@
 {
   "name": "Ri4i",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

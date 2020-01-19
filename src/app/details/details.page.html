@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Name</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" style="text-align: -webkit-center">
+        <div>
+          <a>
+            <img [src]="image" alt="this is the image"/>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" style="text-align: center; background: ghostwhite">
+        <ion-label>Ім'я: {{item.name}}</ion-label>
+        <br>
+        <ion-label>Вік: {{item.age}} роки</ion-label>
+        <br>
+        <ion-label>Стать: {{item.gender}}</ion-label>
+        <br>
+        <ion-label>Порода: {{item.breed}} </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--Переход к Функционалу приложения-->
+  <br>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="grid_col" size="6">
+        <div>
+          <a [routerLink]="['/food']">
+            <ion-img class="icon_img" src="assets\img\food.svg"></ion-img>
+          </a>
+
+        </div>
+        Харчування
+      </ion-col>
+      <ion-col class="grid_col" size="6">
+        <div>
+          <!--                    <a [routerLink]="['/care']">-->
+          <!--                        <ion-img src="assets\img\Test.svg" style="color: #1e2023; height:50px;width: 50px;"></ion-img>-->
+          <!--                    </a>-->
+          <a [routerLink]="['/care']">
+            <ion-img class="icon_img" src="assets\img\care.svg"></ion-img>
+          </a>
+        </div>
+        Догляд
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="grid_col" size="6">
+        <div>
+          <a [routerLink]="['/medicine']">
+            <ion-img class="icon_img" src="assets\img\medicine.svg"></ion-img>
+          </a>
+        </div>
+        Медицина
+      </ion-col>
+      <ion-col class="grid_col" size="6">
+        <div>
+          <a [routerLink]="['/hygiene']">
+            <ion-img class="icon_img" src="assets\img\hygiene.svg"></ion-img>
+          </a>
+        </div>
+        Гігієна
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<!--  <div>-->
+<!--    <ion-row>-->
+<!--      <ion-col size="6" offset="3">-->
+<!--        <img [src]="image" alt="this is the image"/>-->
+<!--      </ion-col>-->
+<!--    </ion-row>-->
+<!--    <ion-row>-->
+<!--      <ion-col size="6" offset="3">-->
+<!--        <ion-button fill="outline" expand="block" size="small" (click)="openImagePicker()">Change Picture</ion-button>-->
+<!--      </ion-col>-->
+<!--    </ion-row>-->
+<!--  </div>-->
+<!--  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">-->
+<!--    <ion-item>-->
+<!--      <ion-label position="floating" color="primary">Title</ion-label>-->
+<!--      <ion-input type="text" formControlName="title"></ion-input>-->
+<!--    </ion-item>-->
+<!--    <ion-item>-->
+<!--      <ion-label position="floating" color="primary">Description</ion-label>-->
+<!--      <ion-input type="text" formControlName="description"></ion-input>-->
+<!--    </ion-item>-->
+<!--    <ion-button class="submit-button" expand="block" type="submit" [disabled]="!validations_form.valid">Save</ion-button>-->
+<!--  </form>-->
+<!--  <ion-button class="delete-button" expand="block" color="danger" (click)="delete()">Delete</ion-button>-->
+
+</ion-content>

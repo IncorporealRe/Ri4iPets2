@@ -24,3 +24,29 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.header-background-color {
+  --background: #ffb404;
+  --color: black;
+  height: 100%;
+}
+
+.header-icon {
+  width: 1.8em;
+  height: 1.8em;
+  color: black;
+  margin: 0.2em;
+}
+
+ion-item {
+  margin: 0.5rem;
+}
+
+.grid_col{
+  text-align: -webkit-center;
+  align-self: center;
+}
+.icon_img{
+  color: #1e2023;width: 50px;
+  height: 50px;
+}
